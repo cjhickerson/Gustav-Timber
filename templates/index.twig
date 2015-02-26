@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% if posts %}
+		{% for row in posts|batch(2) %}
+			{% set format = 'none' %}
+			{% for post in row %}
+				{% if get_post_format(post.id) %}
+					{% set format = get_post_format(post.id) %}
+				{% endif %}
+			{% endfor %}
+
+			<div class="row">
+			{% for post in row %}
+				{% if settings.tease_width == "half" %}
+					{% include ['tease/tease-'~get_post_format(post.id)~'.twig', 'tease/tease-half.twig'] %}
+				{% else %}
+					{% include ['tease/tease-'~get_post_format(post.id)~'.twig', 'tease/tease.twig'] %}
+				{% endif %}
+			{% endfor %}
+			</div>
+		{% endfor %}
+	{% else %}
+	<article id="post-0" class="post no-results not-found">
+	  <header class="entry-header">
+		<h1 class="entry-title">Nothing Found</h1>
+	  </header>
+	<div class="entry-content">'Apologies, but no results were found for the requested archive.</div>
+	</article>
+	{% endif %}
+
+{% endblock %}

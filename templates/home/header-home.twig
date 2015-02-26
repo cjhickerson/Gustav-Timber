@@ -1,0 +1,38 @@
+<style type="text/css">
+{% if custom_header.height > 0 %}
+.header-home .jumbotron {
+	background-image:url('{{custom_header.url}}'); 
+	height: {{custom_header.height}}px;
+}
+{% endif %}
+
+{% if custom_header.height > 400 %}
+.header-home .jumbotron h1 {
+	margin-top: {{custom_header.height - 200}}px;
+}
+{% endif %}
+</style>
+
+<div class="header-home">
+	<div class="container hidden-sm hidden-xs">
+		<div class="jumbotron">
+			<div class="box">
+				<h1>
+					<span class="bg">
+						{% if title %}
+							{{title}}
+						{% else %}
+							{{site.title}}
+						{% endif %}
+					</span>
+				</h1>
+				{% if tagline %}<p><span class="bg">{{tagline}}</span></p>{% endif %}
+			</div>
+		</div>
+
+		{% if lead_art.caption %}<p class="caption text-right">{{lead_art.caption}}</p>{% endif %}
+	</div>
+	<div class="container visible-sm visible-xs">
+		<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
+	</div>
+</div>

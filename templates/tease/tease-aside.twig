@@ -1,0 +1,46 @@
+<div class="col-md-12">
+	{% set ratio = post.thumbnail.height / post.thumbnail.width %}
+
+	{% if post.thumbnail and ratio < 0.33 %}
+	<article id="post-{{ post.id }}" class="media aside wide">
+
+		<a href="{{post.permalink}}">
+			<img class="fit round" src="{{post.thumbnail.src}}" />
+		</a>
+
+		<div class="row">
+			<div class="media-body col-md-12">
+				<h2 class="media-heading"><a title="Permalink to {{ post.title }}" href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+				<p>{{ post.get_preview(30) }}</p>
+				{% include 'tease/misc/categories.twig' %}
+			</div>
+		</div>
+	</article>
+	{% else %}
+	<article id="post-{{ post.id }}" class="media aside">
+		<div class="row">
+			{% if settings.aside_thumbnail_position == "left" %}
+			<div class="col-md-6">
+				<a href="{{post.permalink}}">
+					<img class="fit round" src="{{post.thumbnail.src}}" />
+				</a>
+			</div>
+			{% endif %}
+			<div class="col-md-6">
+				<div class="media-body">
+					<h2 class="media-heading"><a title="Permalink to {{ post.title }}" href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+					<p>{{ post.get_preview(60) }}</p>
+					{% include 'tease/misc/categories.twig' %}
+				</div>
+			</div>
+			{% if settings.aside_thumbnail_position == "right" %}
+			<div class="col-md-6">
+				<a href="{{post.permalink}}">
+					<img class="fit round" src="{{post.thumbnail.src}}" />
+				</a>
+			</div>
+			{% endif %}
+		</div>
+	</article>
+	{% endif %}
+</div>

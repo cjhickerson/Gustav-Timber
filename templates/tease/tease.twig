@@ -1,0 +1,16 @@
+<div class="col-md-12">
+	<article id="post-{{ post.id }}" class="media pseudo-row">
+		{% if post.thumbnail %}
+		<a class="media-left pull-left" href="{{post.permalink}}">
+			<img class="round" src="{{post.thumbnail.src|resize(150, 100, '#FFFFFF')}}" />
+		</a>
+		{% endif %}
+
+		<h2 class="media-heading"><a title="Permalink to {{ post.title }}" href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+
+		<div class="media-body">
+			<p>{{ post.get_preview(30) }}</p>
+			{% include 'tease/misc/categories.twig' %}
+		</div>
+	</article>
+</div>
