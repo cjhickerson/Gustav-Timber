@@ -1,0 +1,229 @@
+/*
+Theme Name: Gustav-Timber
+Theme URI: https://github.com/cjhickerson/Gustav-Timber
+Author: Chris Hickerson
+Author URI: http://chrishickerson.com
+Description: A Timber compatable theme with a simple design and some general settings.
+*/
+
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+img.fit {
+	width: 100%;
+}
+
+img.round,
+.single .wp-caption img {
+	border-radius: 4px;
+}
+
+blockquote {
+	font-weight: 300;
+	margin: 15px 0;
+	border-left: 10px solid rgb(244, 244, 244);
+	border-right: 10px solid rgb(244, 244, 244);
+}
+
+.btn {
+	border-radius: 4px;
+	border-color: #eee;
+	padding: 5px 10px;
+}
+
+#content {
+	margin-top: 30px;
+}
+
+/* header */
+header nav.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+header nav .container-fluid {
+	max-width: 1170px;
+}
+
+header nav .navbar-brand {
+	font-weight: bold;
+}
+
+.page-header {
+	font-size: 45px;
+	border: none;
+	border-radius:4px;
+	margin: 15px 0 0;
+}
+
+/* Header-Home.twig */
+.header-home {
+	margin: 15px 0 0;
+}
+
+.header-home .jumbotron {
+	border-radius: 4px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.header-home .jumbotron h1,
+.header-home .jumbotron p {
+	margin: 15px 0;
+}
+
+.header-home .jumbotron .bg,
+footer .bg {
+	color: #333;
+	font-weight: normal;
+	background: #fff;/*rgba(0,0,0, 1);*/
+	padding: 5px 15px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.header-home .caption {
+	margin: 5px 10px;
+}
+
+/* tease */
+section#content .pseudo-row,
+section#content .aside {
+	margin:0;
+}
+
+section#content article {
+	padding-bottom: 30px;
+}
+
+section#content article.col-md-12 img {
+	padding-bottom: 10px;
+}
+
+section#content article .media-left {
+	padding-right: 30px;
+}
+
+section#content .media-heading {
+	font-weight: bold;
+	margin-top:10px;
+}
+
+section#content blockquote,
+section#content .link {
+	margin:0 0 30px;
+	font-size: 20px;
+}
+
+section#content .link {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+section#content .link p {
+	padding: 0;
+	margin: 0;
+}
+
+.pagination li a {
+	border-color: #eee;
+}
+
+/* footer */
+#footer {
+	padding: 30px 0;
+}
+
+#footer .nav {
+	margin-bottom: 0;
+	border: 1px solid #eee;
+	border-radius: 4px;
+}
+
+#footer .nav li {
+	border-left: 1px solid #eee;
+}
+
+#footer .nav li:first-child {
+	border-left: 0;
+}
+
+
+/* sidebar / aside */
+aside.widget {
+	padding: 15px;
+	margin-bottom: 30px;
+	border-radius: 4px;
+}
+
+aside.widget .widgettitle {
+	margin-top:0px;
+}
+
+/* single */
+article.single h1 {
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.single header {
+	padding: 0 0 30px;
+}
+
+.single p {
+	font-size:15px;
+	line-height: 1.6em;
+	margin-bottom: 30px;
+}
+
+p.wp-caption-text {
+	color: #666;
+	margin: 5px 0;
+}
+
+.wp-caption img {
+	width: 100%;
+}
+
+img.alignright,
+div.wp-caption.alignright {
+	float: right;
+	margin: 0px 0px 15px 30px;
+}
+
+img.alignleft,
+div.wp-caption.alignleft {
+	float: left;
+	margin: 0px 30px 15px 0px;
+}
+
+img.aligncenter,
+div.wp-caption.aligncenter {
+	margin: 15px auto;
+	display: block;
+}
+
+/* widgets */
+.widget.widget_categories .widget-body > ul {
+	padding-left: 15px;
+}
+
+.widget.widget_categories .widget-body > ul ul {
+	padding-left: 15px;
+}
+
+/* 404 */
+.container.fourofour {
+	padding: 60px 0;
+}
+
+/********** RESPONSIVE CLASSES **********/
+@media (max-width: 768px) {
+	
+	/* Single */
+	.single .wp-caption {
+		width: 100% !important;
+	}
+	
+}
