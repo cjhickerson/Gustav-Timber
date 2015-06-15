@@ -12,15 +12,26 @@ module.exports = function(grunt) {
 		}
 	  }
 	},
+	compress: {
+	  main: {
+		options: {
+		  mode: 'gzip'
+		},
+		expand: true,
+		cwd: 'css/',
+		src: ['css/theme.min.css'],
+		dest: 'css/theme.min.css'
+	  }
+	},
 	watch: {
 		files: ['css/build/*.css'],
-		tasks: ['cssmin']
+		tasks: ['cssmin', 'compress']
 	}
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
-  grunt.registerTask('default', ['cssmin']);
+  grunt.registerTask('default', ['cssmin', 'compress']);
 
 };
