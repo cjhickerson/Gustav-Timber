@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	  },
 	  target: {
 		files: {
-		  'css/theme.min.css': ['css/build/style.css', 'css/build/bootstrap.min.css']
+		  'css/theme.min.css': ['css/build/style.css', 'css/build/bootstrap.min.css', 'css/build/font-awesome.min.css']
 		}
 	  }
 	},
