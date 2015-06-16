@@ -36,7 +36,7 @@ class Gustav extends TimberSite {
 	}
 	
 	function register_scripts(){
-		wp_enqueue_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js', 'jQuery');
+		wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/theme.min.js', 'jQuery');
 	}
 
     function add_to_context($context){
