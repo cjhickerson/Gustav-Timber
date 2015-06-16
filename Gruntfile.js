@@ -8,9 +8,19 @@ module.exports = function(grunt) {
 	  },
 	  target: {
 		files: {
-		  'css/theme.min.css': ['css/build/fonts.css', 'css/build/bootstrap.min.css', 'css/build/font-awesome.min.css', 'css/build/style.css']
+		  'css/theme.min.css': ['build/fonts.css', 'build/bootstrap/dist/css/bootstrap.css', 'build/font-awesome.min.css', 'build/style.css']
 		}
 	  }
+	},
+	uglify: {
+		options: {
+			mangle: false
+		},
+		my_target: {
+			files: {
+				'js/theme.min.js': ['build/theme.js','build/bootstrap/dist/js/bootstrap.js']
+			}
+		}
 	},
 	compress: {
 	  main: {
@@ -25,13 +35,14 @@ module.exports = function(grunt) {
 	},
 	watch: {
 		files: ['css/build/*.css'],
-		tasks: ['cssmin', 'compress']
+		tasks: ['cssmin', 'uglify', 'compress']
 	}
   });
 
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['cssmin', 'compress']);
+  grunt.registerTask('default', ['cssmin', 'compress', 'uglify']);
 
 };
