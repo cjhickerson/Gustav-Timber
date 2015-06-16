@@ -2,7 +2,7 @@
 {% if custom_header.height > 0 %}
 .header-home .jumbotron {
 	background-image:url('{{custom_header.url}}'); 
-	height: {{custom_header.height}}px;
+	/*height: {{custom_header.height}}px;*/
 }
 {% endif %}
 
@@ -17,16 +17,14 @@
 	<div class="container hidden-sm hidden-xs">
 		<div class="jumbotron">
 			<div class="box">
-				<h1>
-					<span class="bg">
-						{% if title %}
-							{{title}}
-						{% else %}
-							{{site.title}}
-						{% endif %}
-					</span>
-				</h1>
-				{% if tagline %}<p><span class="bg">{{tagline}}</span></p>{% endif %}
+				<div class="row">
+					<div class="col-md-8">
+						<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
+					</div>
+					<div class="col-md-4">
+						<p>{{site.description}}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 

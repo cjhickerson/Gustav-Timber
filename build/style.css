@@ -63,13 +63,17 @@ header nav .navbar-brand {
 
 .header-home .jumbotron {
 	border-radius: 4px;
-	text-align: center;
 	margin-bottom: 0;
 }
 
 .header-home .jumbotron h1,
 .header-home .jumbotron p {
+	text-align: center;
 	margin: 15px 0;
+}
+
+.header-home .jumbotron p {
+	text-align: left;
 }
 
 .header-home .jumbotron .bg,
