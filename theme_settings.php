@@ -115,7 +115,7 @@ $sidebarargs = array(
 	'description'   => '',
     'class'         => '',
 	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div></aside>',
+	'after_widget'  => '</aside>',
 	'before_title'  => '<h3 class="widgettitle">',
 	'after_title'   => '</h3><div class="widget-body">' );
 register_sidebar($sidebarargs);

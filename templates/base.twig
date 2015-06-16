@@ -9,46 +9,33 @@
 		{% include 'home/header-home.twig' %}
 	{% else %}
 	<div class="container">
-		{% if title %}<h1 class="text-center page-header">{{title}}</h1>{% endif %}
+		<h1 class="text-center page-header">{{title}}</h1>
 	</div>
 	{% endif %}
 	
 	<div class="container">
 		<section id="content" role="main" class="content-wrapper">
-			{% if sidebar %}
 			<div class="row">
 				{% if settings.sidebar_position == "left" %}
-					<div class="col-md-3">
-					{% include 'sidebar/sidebar.twig' %}
-					</div>
-					{% endif %}
-
-					{% if settings.sidebar_position == "hide" %}
-					<div class="col-md-10 col-md-offset-1">
-					{% else %}
-					<div class="col-md-9">
-					{% endif %}
+				<div class="col-md-3">{% include 'sidebar/sidebar.twig' %}</div>
 				{% endif %}
-						
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-						
-				{% if sidebar %}
-					</div>
-					{% if settings.sidebar_position == "right" %}
-					<div class="col-md-3">
-					{% include 'sidebar/sidebar.twig' %}
-					</div>
+
+				{% if settings.sidebar_position == "hide" %}
+				<div class="col-md-10 col-md-offset-1">
+				{% else %}
+				<div class="col-md-9">
+				{% endif %}
+					{% block content %}
+						Sorry, no content
+					{% endblock %}
+				</div>
+				{% if settings.sidebar_position == "right" %}
+				<div class="col-md-3">{% include 'sidebar/sidebar.twig' %}</div>
 				{% endif %}
 			</div>
-
-
-			{% endif %}
 		</section>
 		
 		{% include "pagination.twig" %}
-
 	</div>
 	
 
