@@ -2,18 +2,16 @@
 
 {% block content %}
 	<div class="content-wrapper container-fluid">
-		<div class="row">
-			<article class="post-type-{{post.post_type}} single col-md-10 col-md-offset-1" id="post-{{post.ID}}">
-				<header>
-					<h1 class="article-h1">{{post.title}}</h1>
+		<article class="post-type-{{post.post_type}} single" id="post-{{post.ID}}">
+			<header>
+				<h1 class="article-h1">{{post.title}}</h1>
 
-					{% include 'tease/misc/categories.twig' %}
-				</header>
-				<section class="article-body">
-					{{ post.content }}
-				</section>
-			</article>
-		</div>
+				{% include 'tease/misc/categories.twig' %}
+			</header>
+			<section class="article-body">
+				{{ post.content }}
+			</section>
+		</article>
 	</div>
 
 {% endblock %}

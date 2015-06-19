@@ -1,0 +1,30 @@
+<style type="text/css">
+header nav,
+aside.widget,
+.btn,
+.page-header {
+	background: {{get_theme_mod('bgcolor')}};
+	color: {{get_theme_mod('textcolor')}};
+}
+{% if get_theme_mod('bgcolor') == '#ffffff' %}
+aside.widget,
+.btn {
+	border: 1px solid #eee;
+}
+{% endif %}
+body a,
+section#content .link a,
+aside.widget a,
+header nav a {
+	color: {{get_theme_mod('linkcolor')}};
+}
+
+.pagination li a {
+	color: {{get_theme_mod('linkcolor')}};
+}
+
+.pagination li.page-number.active span {
+	background: {{get_theme_mod('linkcolor')}};
+	border-color: {{get_theme_mod('linkcolor')}};
+}
+</style>
