@@ -26,10 +26,9 @@
 	$context['sidebar'] = Timber::get_widgets('main_sidebar');
 	$context['posts'] = Timber::get_posts();
 	$context['pagination'] = Timber::get_pagination();
-	$templates = array('index.twig');
+
+	$templates = 'index.twig';
 	if (is_home()){
-		array_unshift($templates, 'home.twig');
+		$templates = 'home.twig';
 	}
 	Timber::render($templates, $context);
-
-

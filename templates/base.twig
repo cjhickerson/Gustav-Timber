@@ -3,15 +3,10 @@
 <body class="{{body_class}}">
   	{% block header %}
 		{% include 'base/header.twig' %}
+		<div class="container">
+			<h1 class="text-center page-header">{{title}}</h1>
+		</div>
   	{% endblock %}
-
-	{% if home %}
-		{% include 'home/header-home.twig' %}
-	{% else %}
-	<div class="container">
-		<h1 class="text-center page-header">{{title}}</h1>
-	</div>
-	{% endif %}
 	
 	<div class="container">
 		<section id="content" role="main" class="content-wrapper">
