@@ -20,6 +20,7 @@ class Gustav extends TimberSite {
         add_action('init', array($this, 'register_taxonomies'));
         add_action('wp_enqueue_scripts', array($this, 'register_stylesheets'));
         add_action('wp_enqueue_scripts', array($this, 'register_scripts'));
+		add_image_size('medium', 360, 0, false);
         parent::__construct();
     }
 

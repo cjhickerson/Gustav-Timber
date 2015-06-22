@@ -1,16 +1,25 @@
 <div class="col-md-12">
 	<article id="post-{{ post.id }}" class="media pseudo-row">
-		{% if post.thumbnail %}
-		<a class="media-left pull-left" href="{{post.permalink}}">
-			<img class="round" src="{{post.thumbnail.src|resize(150, 100, '#FFFFFF')}}" />
-		</a>
-		{% endif %}
+		<div class="row">
+			{% if post.thumbnail %}
+			<div class="col-xs-12 col-sm-6 visible-sm visible-xs">
+				{% include 'tease/picture.twig' %}
+			</div>
+			{% endif %}
+			<div class="col-xs-12 {% if post.thumbnail %} col-sm-6 {% endif %} col-md-12">
+				{% if post.thumbnail %}
+				<a class="media-left pull-left hidden-sm hidden-xs" href="{{post.permalink}}">
+					{% include 'tease/picture.twig' with {'picsize': 'tease'} %}
+				</a>
+				{% endif %}
 
-		<h2 class="media-heading"><a title="Permalink to {{ post.title }}" href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
+				<h2 class="media-heading"><a title="Permalink to {{ post.title }}" href="{{ post.permalink }}" rel="bookmark">{{ post.title }}</a></h2>
 
-		<div class="media-body">
-			<p>{{ post.get_preview(30) }}</p>
-			{% include 'tease/misc/categories.twig' %}
+				<div class="media-body">
+					<p>{{ post.get_preview(30) }}</p>
+					{% include 'tease/misc/categories.twig' %}
+				</div>
+			</div>
 		</div>
 	</article>
 </div>
