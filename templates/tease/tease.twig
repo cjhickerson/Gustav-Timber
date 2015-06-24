@@ -3,13 +3,13 @@
 		<div class="row">
 			{% if post.thumbnail %}
 			<div class="col-xs-12 col-sm-6 visible-sm visible-xs">
-				{% include 'tease/picture.twig' %}
+				{% include 'tease/misc/picture.twig' %}
 			</div>
 			{% endif %}
 			<div class="col-xs-12 {% if post.thumbnail %} col-sm-6 {% endif %} col-md-12">
 				{% if post.thumbnail %}
 				<a class="media-left pull-left hidden-sm hidden-xs" href="{{post.permalink}}">
-					{% include 'tease/picture.twig' with {'picsize': 'tease'} %}
+					{% include 'tease/misc/picture.twig' with {'picsize': 'tease'} %}
 				</a>
 				{% endif %}
 

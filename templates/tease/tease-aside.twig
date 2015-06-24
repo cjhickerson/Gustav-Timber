@@ -4,7 +4,7 @@
 	{% if post.thumbnail and ratio < 0.33 %}
 	<article id="post-{{ post.id }}" class="media aside wide">
 
-		<a href="{{post.permalink}}">{% include 'tease/picture.twig' %}</a>
+		<a href="{{post.permalink}}">{% include 'tease/misc/picture.twig' %}</a>
 
 		<div class="row">
 			<div class="media-body col-sm-12">
@@ -19,11 +19,11 @@
 		<div class="row">
 			{% if settings.aside_thumbnail_position == "left" %}
 			<div class="col-md-6 hidden-sm hidden-xs">
-				<a href="{{post.permalink}}">{% include 'tease/picture.twig' %}</a>
+				<a href="{{post.permalink}}">{% include 'tease/misc/picture.twig' %}</a>
 			</div>
 			{% endif %}
 			<div class="col-sm-6 visible-sm visible-xs">
-				<a href="{{post.permalink}}">{% include 'tease/picture.twig' %}</a>
+				<a href="{{post.permalink}}">{% include 'tease/misc/picture.twig' %}</a>
 			</div>
 			<div class="{% if post.thumbnail %} col-sm-6 {% else %} col-sm-12 {% endif %}">
 				<div class="media-body">
@@ -34,7 +34,7 @@
 			</div>
 			{% if settings.aside_thumbnail_position == "right" %}
 			<div class="col-md-6 hidden-sm hidden-xs">
-				<a href="{{post.permalink}}">{% include 'tease/picture.twig' %}</a>
+				<a href="{{post.permalink}}">{% include 'tease/misc/picture.twig' %}</a>
 			</div>
 			{% endif %}
 		</div>
