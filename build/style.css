@@ -57,6 +57,10 @@ header nav .navbar-brand {
 }
 
 /* Header-Home.twig */
+body > header {
+	padding: 30px 0 0;
+}
+
 .header-home {
 	margin: 15px 0 0;
 }
@@ -137,13 +141,8 @@ section#content .link p {
 	padding: 30px 0;
 }
 
-#footer .nav {
-	margin-bottom: 0;
-	border: 1px solid #eee;
-	border-radius: 4px;
-}
-
-#footer .nav li {
+#footer .nav li,
+header .nav li {
 	border-left: 1px solid #eee;
 }
 

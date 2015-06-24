@@ -1,9 +1,10 @@
 <footer id="footer" class="container">
-	<nav id="access" class="main-navigation navbar" role="navigation">
+	<hr>
+	<nav id="access" class="navbar" role="navigation">
 	  <div class="container-fluid">
-		  <ul class="nav nav-justified">
+		  <ul class="navbar-nav nav">
 		  {% for item in footerMenu.items %}
-			  <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+			  <li id="menu-item-{{item.ID}}" class="">
 				  <a href="{{item.link}}">{{item.title}}</a>
 			  </li>
 		  {% endfor %}

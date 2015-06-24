@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 	  }
 	},
 	watch: {
-		files: ['css/build/*.css'],
+		files: ['build/*.css', 'build/*.js'],
 		tasks: ['cssmin', 'uglify', 'compress']
 	}
   });
