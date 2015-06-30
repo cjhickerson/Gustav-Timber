@@ -3,8 +3,6 @@ function add_to_twig($twig) {
     //$twig->addFunction( new Twig_SimpleFunction( 'function', array( $this, 'exec_function' ) ) );
     $twig->addExtension(new Twig_Extension_StringLoader());
     $twig->addExtension(new Twig_Extension_Debug());
-    $twig->addFunction( new Twig_SimpleFunction('wp_head', wp_head() ) );
-    $twig->addFunction( new Twig_SimpleFunction('wp_footer', wp_footer() ) );
     return $twig;
 }
 
