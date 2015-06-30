@@ -1,10 +1,4 @@
 <?php
-function add_to_twig($twig) {
-    //$twig->addFunction( new Twig_SimpleFunction( 'function', array( $this, 'exec_function' ) ) );
-    $twig->addExtension(new Twig_Extension_StringLoader());
-    $twig->addExtension(new Twig_Extension_Debug());
-    return $twig;
-}
 
 class Gustav extends TimberSite {
 
