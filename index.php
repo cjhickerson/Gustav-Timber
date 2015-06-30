@@ -13,22 +13,22 @@
  * @since 		Timber 0.1
  */
 
-	if (!class_exists('Timber')){
-		echo 'Timber not activated. Make sure you activate the plugin in <a href="/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
-		return;
-	}
-	$context = Timber::get_context();
-	if (is_home()) {
-		$context['html_title'] = $context['site']->title;
-	} else {
-		$context['html_title'] = $context['site']->title." | ".$context['post']->title;
-	};
-	$context['sidebar'] = Timber::get_widgets('main_sidebar');
-	$context['posts'] = Timber::get_posts();
-	$context['pagination'] = Timber::get_pagination();
+if (!class_exists('Timber')){
+	echo 'Timber not activated. Make sure you activate the plugin in <a href="/wp-admin/plugins.php#timber">/wp-admin/plugins.php</a>';
+	return;
+}
+$context = Timber::get_context();
+if (is_home()) {
+	$context['html_title'] = $context['site']->title;
+} else {
+	$context['html_title'] = $context['site']->title." | ".$context['post']->title;
+};
+$context['sidebar'] = Timber::get_widgets('main_sidebar');
+$context['posts'] = Timber::get_posts();
+$context['pagination'] = Timber::get_pagination();
 
-	$templates = 'index.twig';
-	if (is_home()){
-		$templates = 'home.twig';
-	}
-	Timber::render($templates, $context);
+$templates = 'index.twig';
+if (is_home()){
+	$templates = 'home.twig';
+}
+Timber::render($templates, $context);
