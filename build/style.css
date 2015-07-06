@@ -169,7 +169,7 @@ article.single h1 {
 }
 
 .single header {
-	padding: 0 0 30px;
+	padding-bottom:30px;
 }
 
 .single p {
