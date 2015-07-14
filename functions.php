@@ -65,6 +65,13 @@ class Gustav extends TimberSite {
 
         $gustav_comment_form = new Twig_SimpleFunction('gustav_comment_form', function($id) {
             $args = array(
+                'fields' => array(
+                    'author' => '<div class="form-group"><label for="author">' . __( 'Name' ) . '</label><input id="author" class="form-control" name="author" type="text" value="" /></div>',
+                    'email'  => '<div class="form-group"><label for="email">' . __( 'Email' ) . '</label> ' .
+    	            '<input id="email" class="form-control" name="email" type="text" value="" /></div>',
+    	            'url'    => '<div class="form-group"><label for="url">' . __( 'Website' ) . '</label>' .
+    	            '<input id="url" class="form-control" name="url" type="text" value="" /></div>',
+                ),
                 'comment_field' => '<div class="form-group"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" class="form-control" name="comment" aria-required="true"></textarea></p>',
                 'class_submit' => 'btn btn-default',
                 'title_reply' => null
