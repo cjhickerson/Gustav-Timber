@@ -1,6 +1,11 @@
-<li class="blog-comment media {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
-  <blockquote class="pullquote">
-    {{comment.comment_content|wpautop}}
-    <p class="comment-author"><strong>&mdash; {{comment.author.name}}</strong></p> 
-  </blockquote>
-</li>
+{% if comment.comment_approved == 1 %}
+<div class="blog-comment media {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
+    <blockquote class="pullquote {% if reply %}comment-reply{% endif %}">
+        {{comment.comment_content|wpautop}}
+        <p class="comment-author"><strong>&mdash; {{comment.author.name}}</strong> on {{comment.comment_date | date("F d, Y \\a\\t g:ia")}}</p>
+    </blockquote>
+    {% for comment in comment.children %}
+        {% include 'comment.twig' with {'comment': comment, 'reply': true}%}
+    {% endfor %}
+</div>
+{% endif %}

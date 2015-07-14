@@ -11,6 +11,20 @@
 			<section class="article-body">
 				{{ post.content }}
 			</section>
+
+			{% if post.comments %}
+			<section class="comments">
+				<hr>
+				<h3>Comments</h3>
+
+				{% for comment in post.comments %}
+					{% include 'comment.twig' %}
+				{% endfor %}
+
+				{{ gustav_comment_form(post.ID) }}
+
+			</section>
+			{% endif %}
 		</article>
 	</div>
 
