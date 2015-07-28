@@ -158,11 +158,18 @@ header .nav li {
 /* sidebar / aside */
 aside.widget {
 	padding: 30px 15px;
-	border-width: 0 1px 1px 0;
 }
 
 aside.widget:last-child {
 	border-bottom: 0;
+}
+
+.sidebar-left aside.widget {
+	border-width: 0 1px 1px 0;
+}
+
+.sidebar-right aside.widget {
+	border-width: 0 0 1px 1px;
 }
 
 aside.widget .widgettitle {
