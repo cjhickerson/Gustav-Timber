@@ -1,10 +1,11 @@
+/*
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
-/*
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -12,3 +13,5 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,900);
