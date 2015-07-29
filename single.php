@@ -13,6 +13,6 @@ $context = Timber::get_context();
 $post = Timber::query_post();
 $context['post'] = $post;
 $context['html_title'] = $context['site']->title." | ".$context['post']->title;
-$context['sidebar'] = Timber::get_widgets('main_sidebar');
+$context['sidebar'] = null;
 
 Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);

@@ -11,6 +11,7 @@
 	<div class="container">
 		<section id="content" role="main" class="content-wrapper">
 			<div class="row">
+			{% if sidebar %}
 				{% if settings.sidebar_position == "left" %}
 				<div class="col-md-3">{% include 'sidebar/sidebar.twig' %}</div>
 				{% endif %}
@@ -20,14 +21,18 @@
 				{% else %}
 				<div class="col-md-9">
 				{% endif %}
+			{% else %}
+				<div class="col-md-8 col-md-offset-2">
+			{% endif %}
 					{% block content %}
 						Sorry, no content
 					{% endblock %}
 				</div>
-
+			{% if sidebar %}
 				{% if settings.sidebar_position == "right" %}
 				<div class="col-md-3">{% include 'sidebar/sidebar.twig' %}</div>
 				{% endif %}
+			{% endif %}
 			</div>
 		</section>
 		

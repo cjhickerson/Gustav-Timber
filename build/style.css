@@ -41,10 +41,6 @@ header nav.navbar {
 	border-radius: 0;
 }
 
-header nav .container-fluid {
-	max-width: 1170px;
-}
-
 header nav .navbar-brand {
 	font-weight: bold;
 }
@@ -147,7 +143,12 @@ section#content .link p {
 
 #footer .nav li,
 header .nav li {
-	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+
+#footer .nav li:last-child,
+header .nav li:last-child {
+	border-right: 0;
 }
 
 #footer .nav li:first-child {

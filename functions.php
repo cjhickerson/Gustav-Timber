@@ -36,6 +36,8 @@ class Gustav extends TimberSite {
         $context['headerMenu'] = new TimberMenu('header-menu');
         $context['footerMenu'] = new TimberMenu('footer-menu');
 
+		$context['sidebar'] = Timber::get_widgets('main_sidebar');
+
         $context['site'] = $this;
 
 		$context['home'] = (is_home()) ? true : false;
