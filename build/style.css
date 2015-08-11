@@ -48,7 +48,6 @@ header nav .navbar-brand {
 .page-header {
 	font-size: 45px;
 	border: none;
-	border-radius:4px;
 	margin: 15px 0 0;
 }
 
@@ -64,15 +63,17 @@ body > header {
 .header-home .jumbotron {
 	border-radius: 0;
 	margin-bottom: 0;
+	padding: 0;
 }
 
 .header-home .jumbotron h1,
 .header-home .jumbotron p {
-	margin: 15px 0;
+	margin: 30px 45px;
 }
 
 .header-home .jumbotron p {
 	text-align: left;
+	margin-top: 45px;
 }
 
 .header-home .jumbotron .bg,
@@ -82,7 +83,6 @@ footer .bg {
 	background: #fff;/*rgba(0,0,0, 1);*/
 	padding: 5px 15px;
 	text-align: center;
-	border-radius: 4px;
 }
 
 .header-home .caption {
@@ -158,6 +158,8 @@ header .nav li:last-child {
 /* sidebar / aside */
 aside.widget {
 	padding: 30px 15px;
+	border-color: #eee;
+	border-style: solid;
 }
 
 aside.widget:last-child {

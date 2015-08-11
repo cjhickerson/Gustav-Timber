@@ -1,17 +1,10 @@
 <style type="text/css">
-header nav,
-aside.widget,
 .btn,
-.page-header {
+.page-header,
+.header-home .jumbotron {
 	background: {{get_theme_mod('bgcolor')}};
-	color: {{get_theme_mod('textcolor')}};
 }
-{% if get_theme_mod('bgcolor') == '#ffffff' %}
-aside.widget,
-.btn {
-	border: 1px solid #eee;
-}
-{% endif %}
+
 body a,
 section#content .link a,
 aside.widget a,
