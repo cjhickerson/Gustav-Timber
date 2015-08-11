@@ -1,6 +1,6 @@
 <picture>
 	<source srcset="{{post.thumbnail.src('medium')}}" media="(max-width: 360px)">
-	<img class="fit round"
+	<img class="fit"
 		{% if picsize == 'tease' %}
 		src="{{post.thumbnail.src('thumbnail')}}"
 		{% else %}
