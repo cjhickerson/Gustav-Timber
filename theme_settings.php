@@ -13,7 +13,7 @@ add_action( 'init', 'Gustav_menus' );
 function Gustav_customize_register( $wp_customize ) {
 	// Add Section for controls
 	$wp_customize->add_section( 'Gustav_Color_Settings' , array(
-		'title'      => 'Gustav Colors',
+		'title'      => 'Gustav Header Colors',
 		'priority'   => 100,
 	) );
 	$wp_customize->add_section( 'Gustav_Sidebar_Settings' , array(
