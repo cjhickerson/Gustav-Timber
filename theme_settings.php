@@ -98,13 +98,10 @@ add_action( 'customize_register', 'Gustav_customize_register' );
 // add custom header image
 $custom_header_args = array(
 	'default-image'          => '',
-	'width'                  => 1170,
-	'height'                 => 0,
-	'flex-height'            => true,
-	'flex-width'             => true,
+	'width'                  => 780,
+	'height'                 => 200,
+	'flex-height'            => false,
 	'uploads'                => true,
-	'random-default'         => false,
-	'header-text'            => false,
 );
 add_theme_support( 'custom-header', $custom_header_args );
 
