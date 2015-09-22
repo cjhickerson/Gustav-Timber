@@ -3,8 +3,10 @@
 <body class="{{body_class}}">
 {% block header %}
 	{% include 'base/header.twig' %}
-	<div class="container-fluid full-width">
+	<div class="container-fluid page-header-wrap">
+		{% if title %}
 		<h1 class="text-center page-header">{{title}}</h1>
+		{% endif %}
 	</div>
 {% endblock %}
 	

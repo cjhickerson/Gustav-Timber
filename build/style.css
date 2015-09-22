@@ -2,11 +2,6 @@ body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif !important;
 }
 
-.container-fluid.full-width {
-	padding-right: 0;
-	padding-left: 0;
-}
-
 img.aligncenter,
 img.alignright,
 img.alignleft {
@@ -50,11 +45,16 @@ header nav .navbar-brand {
 	font-weight: bold;
 }
 
+.page-header-wrap {
+	padding: 5px 0;
+	margin: 15px 0 0;
+}
+
 .page-header {
 	font-size: 45px;
 	border: none;
-	margin: 15px 0 0;
 	padding: 15px 10px;
+	margin: 0;
 }
 
 /* Header-Home.twig */
