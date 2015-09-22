@@ -3,7 +3,9 @@
   <nav id="access" class="main-navigation navbar" role="navigation">
 	  <div class="container">
 		  <div class="navbar-header">
-			  <a class="hdr-logo-link navbar-brand" href="{{site.url}}" title="Timber" rel="home">{{site.name}}</a>
+        {% if not home %}
+			  <a class="hdr-logo-link navbar-brand" href="{{site.url}}" rel="home">{{site.name}}</a>
+        {% endif %}
 		  </div>
 		  <ul class="navbar-nav nav navbar-right">
 		  {% for item in headerMenu.items %}
