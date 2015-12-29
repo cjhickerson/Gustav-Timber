@@ -1,8 +1,7 @@
-</div>
 <style type="text/css">
 {% if custom_header.height > 0 %}
 .header-home .jumbotron {
-	background-image:url('{{custom_header.url}}'); 
+	background-image:url('{{custom_header.url}}');
 	/*height: {{custom_header.height}}px;*/
 }
 {% endif %}
@@ -20,16 +19,16 @@
 			<div class="box container">
 				<div class="row">
 					{% if site.description %}
-					<div class="col-md-8">
-						<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
-					</div>
-					<div class="col-md-4">
-						<p>{{site.description}}</p>
-					</div>
+						<div class="col-md-8">
+							<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
+						</div>
+						<div class="col-md-4">
+							<p>{{site.description}}</p>
+						</div>
 					{% else %}
-					<div class="col-md-12">
-						<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
-					</div>
+						<div class="col-md-12">
+							<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
+						</div>
 					{% endif %}
 				</div>
 			</div>
