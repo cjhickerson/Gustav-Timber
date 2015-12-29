@@ -146,7 +146,11 @@ section#content .link p {
 
 /* footer */
 #footer {
-	padding: 30px 0;
+	padding: 30px 0 0;
+}
+
+#footer .navbar {
+	margin-bottom: 0;
 }
 
 #footer .nav li,
