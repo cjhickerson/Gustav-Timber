@@ -20,7 +20,7 @@
 				<div class="row">
 					{% if header_widgets %}
 						<div class="col-md-8">
-							<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
+							<h1 class="text-right">{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
 						</div>
 						<div class="col-md-4">
 							{% include 'sidebar/sidebar.twig' with {'sidebar' : header_widgets } %}
