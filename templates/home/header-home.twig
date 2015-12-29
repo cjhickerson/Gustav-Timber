@@ -16,14 +16,14 @@
 <div class="header-home">
 	<div class="container-full hidden-sm hidden-xs">
 		<div class="jumbotron">
-			<div class="box container">
+			<div class="container">
 				<div class="row">
-					{% if site.description %}
+					{% if header_widgets %}
 						<div class="col-md-8">
 							<h1>{% if title %}{{title}}{% else %}{{site.title}}{% endif %}</h1>
 						</div>
 						<div class="col-md-4">
-							<p>{{site.description}}</p>
+							{% include 'sidebar/sidebar.twig' with {'sidebar' : header_widgets } %}
 						</div>
 					{% else %}
 						<div class="col-md-12">

@@ -42,6 +42,10 @@ class Gustav extends TimberSite {
 
 		$context['home'] = (is_home()) ? true : false;
 
+        if (is_home() && Timber::get_widgets('header_widgets')) {
+            $context['header_widgets'] = Timber::get_widgets('header_widgets');
+        }
+
 		$context['custom_header'] = get_custom_header();
 		$context['settings'] = array (
 			'sidebar_position' => get_theme_mod('sidebar_position'),

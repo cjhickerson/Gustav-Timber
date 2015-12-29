@@ -72,6 +72,7 @@ body > header {
 .header-home .jumbotron {
 	border-radius: 0;
 	margin-bottom: 0;
+	padding: 10px;
 }
 
 .header-home .jumbotron h1,

@@ -1,4 +1,4 @@
-<?php 
+<?php
 function Gustav_menus() {
   register_nav_menus(
     array(
@@ -65,32 +65,32 @@ function Gustav_customize_register( $wp_customize ) {
 		'section'    => 'Gustav_Color_Settings',
 		'settings'   => 'bgcolor',
 	) ) );
-	$wp_customize->add_control( 'sidebar_position', 
+	$wp_customize->add_control( 'sidebar_position',
 		array(
 			'label'    => 'Sidebar Position',
 			'section'  => 'Gustav_Sidebar_Settings',
 			'settings' => 'sidebar_position',
 			'type'     => 'radio',
 			'choices'  => array( 'left'  => 'Left', 'right' => 'Right', 'hide' => 'None' )
-		) 
+		)
 	);
-	$wp_customize->add_control( 'aside_thumbnail_position', 
+	$wp_customize->add_control( 'aside_thumbnail_position',
 		array(
 			'label'    => 'Aside Thumbnail Position',
 			'section'  => 'Gustav_Tease_Settings',
 			'settings' => 'aside_thumbnail_position',
 			'type'     => 'radio',
 			'choices'  => array( 'left'  => 'left', 'right' => 'right' )
-		) 
+		)
 	);
-	$wp_customize->add_control( 'tease_width', 
+	$wp_customize->add_control( 'tease_width',
 		array(
 			'label'    => 'Tease Width',
 			'section'  => 'Gustav_Tease_Settings',
 			'settings' => 'tease_width',
 			'type'     => 'radio',
 			'choices'  => array( 'half'  => 'half', 'full' => 'full' )
-		) 
+		)
 	);
 }
 add_action( 'customize_register', 'Gustav_customize_register' );
@@ -119,6 +119,17 @@ $sidebarargs = array(
 	'before_title'  => '<h3 class="widgettitle">',
 	'after_title'   => '</h3><div class="widget-body">' );
 register_sidebar($sidebarargs);
+
+$headerwidgets = array(
+	'name'          => 'Header Widgets',
+	'id'            => 'header_widgets',
+	'description'   => 'Widgets shown in the homepage header',
+    'class'         => '',
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</aside>',
+	'before_title'  => '<h3 class="widgettitle">',
+	'after_title'   => '</h3><div class="widget-body">' );
+register_sidebar($headerwidgets);
 
 // add post format support
 add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'quote' ) );
