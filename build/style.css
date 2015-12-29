@@ -44,6 +44,10 @@ blockquote {
 }
 
 /* header */
+#header {
+	margin-top: 30px;
+}
+
 header nav.navbar {
 	margin-bottom: 0;
 	border-radius: 0;
@@ -146,11 +150,7 @@ section#content .link p {
 
 /* footer */
 #footer {
-	padding: 30px 0 0;
-}
-
-#footer .navbar {
-	margin-bottom: 0;
+	padding: 30px 0;
 }
 
 #footer .nav li,
